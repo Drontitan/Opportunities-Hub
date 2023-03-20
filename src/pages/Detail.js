@@ -188,18 +188,18 @@ const Detail = ({ setActive, user }) => {
           <RelatedBlog id={id} blogs={relatedBlogs} />
         </div>
       </div> */}
-       <div class="dashbard-opport">
-        <div class="left">
-    <div class="wrapper" id="app">
-        <div class="player-page">
-          <div class="player__top">
-            <div class="player-cover">
+       <div className="dashbard-opport">
+        <div className="left">
+    <div className="wrapper" id="app">
+        <div className="player-page">
+          <div className="player__top">
+            <div className="player-cover">
        
-                  <div class="player-cover__item"  style={{ backgroundImage: `url('${blog?.imgUrl}')` }} ></div>
+                  <div className="player-cover__item"  style={{ backgroundImage: `url('${blog?.imgUrl}')` }} ></div>
             </div>
-            <div class="player-controls">
-              <div class="player-controls__item -favorite">
-                <svg class="icon">
+            <div className="player-controls">
+              <div className="player-controls__item -favorite">
+                <svg className="icon">
                   {/* <use xlink:href="#icon-heart-o"></use> */}
                 </svg>
                   <Like handleLike={handleLike} likes={likes} userId={userId} />
@@ -228,11 +228,11 @@ const Detail = ({ setActive, user }) => {
       </div>
 
     </div>
-    <div class="right">
-        <div class="container-phone">
-            <div class="player">
-              <div class="player__controls">
-                <h5 class="player__title">Post Comment</h5>
+    <div className="right">
+        <div className="container-phone">
+            <div className="player">
+              <div className="player__controls">
+                <h5 className="player__title">Post Comment</h5>
               </div>
               <div className="custombox">
                 <div className="scroll">
@@ -259,8 +259,8 @@ const Detail = ({ setActive, user }) => {
                 handleComment={handleComment}
               />
             </div>
-                <div class="player__btn player__btn--medium" id="forward">
-                  <i class="fas fa-forward"></i>
+                <div className="player__btn player__btn--medium" id="forward">
+                  <i className="fas fa-forward"></i>
                 </div>
               </div>
             </div>

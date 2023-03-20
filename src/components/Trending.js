@@ -55,52 +55,52 @@ const Trending = ({ Opportunitys ,loading }) => {
           </div>
         ))}
       </OwlCarousel> */}
-    <div class="trending-opportunities">
-    <section class="popular">
+    <div className="trending-opportunities">
+    <section className="popular">
    
  
-    <section class="popular-card">
+    <section className="popular-card">
       <h1>Popular<br/> This<br/> Month</h1>
     </section>
 
   
 
-   <section class="cards">
+   <section className="cards">
    {Opportunitys?.map((item) => (
     
-     <article key={item.id} class="card">
+     <article key={item.id} className="card">
         
-         <header class="card-header">
-           <p class="date-published">
+         <header className="card-header">
+           <p className="date-published">
             <div className="publishdate">
-            <span class="date-published-prefix">Article</span>
+            <span className="date-published-prefix">Article</span>
               <span>{item.timestamp.toDate().toDateString()}</span>
               </div>
                     </p>
                     <Link to={`/detail/${item.id}`}>
-           <h2 class="card-title"><a >{item.title}</a></h2>
+           <h2 className="card-title"><a >{item.title}</a></h2>
            </Link>
                 </header>
          
 
-           <div class="card-body">
+           <div className="card-body">
 
     
-                    <div class="card-author">
+                    <div className="card-author">
 
        
-                        <a href="#" class="author-avatar">
+                        <a href="#" className="author-avatar">
                             <img src={item.imgUrl} alt=""/>
                         </a>
 
           
-                        <div class="author-name">
-                            <div class="author-name-prefix">Author</div>
+                        <div className="author-name">
+                            <div className="author-name-prefix">Author</div>
                            <div style={{color:"#7a7a8b"}}>{item.author}</div>
                         </div>
 
                 
-                        <svg class="half-circle" viewBox="0 0 106 57">
+                        <svg className="half-circle" viewBox="0 0 106 57">
                             <defs>
                                 <linearGradient id="gradient" x1="25%" y1="25%" x2="75%" y2="75%">
                                     <stop offset="25%" stop-color="#ff8a00" />

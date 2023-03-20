@@ -33,13 +33,13 @@ const FeatureOpportunitys = ({ Opportunitys, title ,loading }) => {
       ))} */}
       {Opportunitys?.map((item) => (
           <div    key={item.id}
-          style={{ cursor: "pointer" }} onClick={() => navigate(`/detail/${item.id}`)} class="Popular">
-        <div class="card-left">
-          <div class="card-image">
+          style={{ cursor: "pointer" }} onClick={() => navigate(`/detail/${item.id}`)} className="Popular">
+        <div className="card-left">
+          <div className="card-image">
             <img  src={item.imgUrl}
               alt={item.title}/>
           </div>
-          <div class="card-text">
+          <div className="card-text">
           <div className="col-7 padding">
             <div className="text-start most-popular-font">{item.title}</div>
             <div className="text-start most-popular-font-meta">

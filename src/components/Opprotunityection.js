@@ -21,32 +21,32 @@ const Opportunityection = ({
   return (
     
     <>
-    <div class="big-card">
-	<div class="container-card">
-        <div class="header-container">
-          <img src={imgUrl} alt={title} class="header-image" />
+    <div className="big-card">
+	<div className="container-card">
+        <div className="header-container">
+          <img src={imgUrl} alt={title} className="header-image" />
           
-          <div class="card-container-header">
-            <h1 class="main-card-heading">{category}</h1>
-            <span class="card-container-tag">Actor</span>
-            <span class="card-container-tag">Producer</span>
+          <div className="card-container-header">
+            <h1 className="main-card-heading">{category}</h1>
+            <span className="card-container-tag">Actor</span>
+            <span className="card-container-tag">Producer</span>
 
           </div> 
         </div>
         
-        <div class="overlay-header"></div>
+        <div className="overlay-header"></div>
         
-        <div class="body-container-card">
-          <img src="https://s17.postimg.cc/xcbukrwdr/Hugh_Jackman_f.jpg" alt="Hugh Jackman" class="body-image" />
-          <div class="body-action-button u-flex-center">
+        <div className="body-container-card">
+          <img src="https://s17.postimg.cc/xcbukrwdr/Hugh_Jackman_f.jpg" alt="Hugh Jackman" className="body-image" />
+          <div className="body-action-button u-flex-center">
             <svg fill="#ffffff" height="28" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
               <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
               <path d="M0 0h24v24H0z" fill="none"/>
             </svg>
           </div>
-          <span class="body-stats">Views<span>3.5k</span></span>
-          <span class="body-stats">Likes<span>* {count}</span></span>
-          <div class="u-clearfix"></div>
+          <span className="body-stats">Views<span>3.5k</span></span>
+          <span className="body-stats">Likes<span>* {count}</span></span>
+          <div className="u-clearfix"></div>
           
       </div>
       </div>

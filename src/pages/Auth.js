@@ -182,24 +182,24 @@ const Auth = ({ setActive, setUser }) => {
     //   </div>
     // </div>
     <>
-      <div class="loginsignupform">
+      <div className="loginsignupform">
         <div className={`containerloginform  ${isActive ? "" :"right-panel-active"}`} id="containerloginform">
-          <div class="form-containerloginform sign-up-containerloginform">
+          <div className="form-containerloginform sign-up-containerloginform">
             <form onSubmit={handleAuth}>
-              <h1 class="Loginsignupheader">Create Account</h1>
-              <div class="social-containerloginform">
-                <a href="" class="social">
-                  <i class="fab fa-facebook-f"></i>
+              <h1 className="Loginsignupheader">Create Account</h1>
+              <div className="social-containerloginform">
+                <a href="" className="social">
+                  <i className="fab fa-facebook-f"></i>
                 </a>
-                <a href="" class="social">
-                  <i class="fab fa-google-plus-g"></i>
+                <a href="" className="social">
+                  <i className="fab fa-google-plus-g"></i>
                 </a>
-                <a href="" class="social">
-                  <i class="fab fa-linkedin-in"></i>
+                <a href="" className="social">
+                  <i className="fab fa-linkedin-in"></i>
                 </a>
               </div>
-              <span class="loginspan">or use your email for registration</span>
-              <div class="adjustname">
+              <span className="loginspan">or use your email for registration</span>
+              <div className="adjustname">
                 <input
                   type="text"
                   placeholder="First Name"
@@ -243,21 +243,21 @@ const Auth = ({ setActive, setUser }) => {
               <button onClick={() =>setSignUp(true)}>Sign Up</button>
             </form>
           </div>
-          <div class="form-containerloginform sign-in-containerloginform">
+          <div className="form-containerloginform sign-in-containerloginform">
             <form onSubmit={handleAuth}>
               <h1>Sign in</h1>
-              <div class="social-containerloginform">
-                <a href="" class="social">
-                  <i class="fab fa-facebook-f"></i>
+              <div className="social-containerloginform">
+                <a href="" className="social">
+                  <i className="fab fa-facebook-f"></i>
                 </a>
-                <a href="" class="social">
-                  <i class="fab fa-google-plus-g"></i>
+                <a href="" className="social">
+                  <i className="fab fa-google-plus-g"></i>
                 </a>
-                <a href="" class="social">
-                  <i class="fab fa-linkedin-in"></i>
+                <a href="" className="social">
+                  <i className="fab fa-linkedin-in"></i>
                 </a>
               </div>
-              <span class="loginspan">or use your account</span>
+              <span className="loginspan">or use your account</span>
               <input type="email"
                 className="form-control input-text-box"
                 placeholder="Email"
@@ -274,25 +274,25 @@ const Auth = ({ setActive, setUser }) => {
               <button     onClick={() =>setSignUp(false)}>Sign In</button>
             </form>
           </div>
-          <div class="overlay-containerloginform">
-            <div class="overlay">
-              <div class="overlay-panel overlay-left">
+          <div className="overlay-containerloginform">
+            <div className="overlay">
+              <div className="overlay-panel overlay-left">
                 <h1>Welcome Back!</h1>
                 <p>
                   To keep connected with us please login with your personal info
                 </p>
                 <button
                  onClick={() => {handleaddclass();}} 
-                class="ghost" id="signIn">
+                className="ghost" id="signIn">
                   Sign In
                 </button>
               </div>
-              <div class="overlay-panel overlay-right">
+              <div className="overlay-panel overlay-right">
                 <h1>Hello, Friend!</h1>
                 <p>Enter your personal details and start journey with us</p>
                 <button 
                 onClick={() => {handleaddclass();}}
-                class="ghost" id="signUp">
+                className="ghost" id="signUp">
                   Sign Up
                 </button>
               </div>

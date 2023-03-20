@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
           
-    <div class="images-leaning">
+    <div className="images-leaning">
     <div>
       <img src="https://assets.codepen.io/1025350/eleanor.jpg" alt="Eleanor from The Good Place" />
     </div>

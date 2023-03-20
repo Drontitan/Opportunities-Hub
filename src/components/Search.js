@@ -20,11 +20,11 @@ const Search = ({ search, handleChange }) => {
         {/* <button className="btn btn-secondary search-btn">
           <i className="fa fa-search" />
         </button> */}
-        <div class="search-box">
-                <input type="text"  value={search} placeholder="Search Opportunities"  onChange={handleChange} class="search-txt"/>
-                <div class="search-btn">
-                <button class="search-btn" >
-                        <i class="fa fa-search"></i>
+        <div className="search-box">
+                <input type="text"  value={search} placeholder="Search Opportunities"  onChange={handleChange} className="search-txt"/>
+                <div className="search-btn">
+                <button className="search-btn" >
+                        <i className="fa fa-search"></i>
                         </button> 
                 </div>
           </div>
