@@ -202,11 +202,11 @@ const Detail = ({ setActive, user }) => {
                 <svg className="icon">
                   {/* <use xlink:href="#icon-heart-o"></use> */}
                 </svg>
-                  <Like handleLike={handleLike} likes={likes} userId={userId} />
               </div>
                         
 
             </div>
+                  <Like handleLike={handleLike} likes={likes} userId={userId} />
       
           </div>
           <div className="container-fluid pb-4 pt-4 padding blog-single-content">
