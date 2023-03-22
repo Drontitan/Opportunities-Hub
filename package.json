@@ -27,6 +27,7 @@
     "react-fontawesome": "^1.7.1",
     "react-owl-carousel": "^2.3.3",
     "react-router-dom": "^6.3.0",
+    "react-rte": "^0.16.5",
     "react-scripts": "5.0.1",
     "react-toastify": "^9.0.1",
     "saas": "^1.0.0",
