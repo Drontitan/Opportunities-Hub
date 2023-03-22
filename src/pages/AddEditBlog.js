@@ -13,13 +13,13 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { toast } from "react-toastify";
-
+import RichTextEditor from "react-rte";
 const initialState = {
   title: "",
   tags: [],
   trending: "no",
   category: "",
-  description: "",
+  description: RichTextEditor.createEmptyValue(),
   comments: [],
   likes: []
 };
@@ -39,6 +39,7 @@ const categoryOption = [
   "Altlasian"
 ];
 
+
 const AddEditBlog = ({ user, setActive }) => {
   const [form, setForm] = useState(initialState);
   const [file, setFile] = useState(null);
@@ -49,7 +50,7 @@ const AddEditBlog = ({ user, setActive }) => {
   const navigate = useNavigate();
 
   const { title, tags, category, trending, description } = form;
-
+  
   useEffect(() => {
     const uploadFile = () => {
       const storageRef = ref(storage, file.name);
@@ -96,8 +97,12 @@ const AddEditBlog = ({ user, setActive }) => {
     const docRef = doc(db, "blogs", id);
     const snapshot = await getDoc(docRef);
     if (snapshot.exists()) {
-      setForm({ ...snapshot.data() });
+      const data = snapshot.data()
+      // console.log(data)
+
+      setForm({ ...data, description: RichTextEditor.createValueFromString(data.description, "html") });
     }
+
     setActive(null);
   };
 
@@ -106,6 +111,7 @@ const AddEditBlog = ({ user, setActive }) => {
   };
 
   const handleTags = (tags) => {
+    // console.log(tags)
     setForm({ ...form, tags });
   };
 
@@ -136,6 +142,8 @@ const AddEditBlog = ({ user, setActive }) => {
         try {
           await updateDoc(doc(db, "blogs", id), {
             ...form,
+
+            description: form.description.toString("html"),
             timestamp: serverTimestamp(),
             author: user.displayName,
             userId: user.uid,
@@ -173,12 +181,13 @@ const AddEditBlog = ({ user, setActive }) => {
                   onChange={handleChange}
                 />
               </div>
+
               <div className="col-12 py-3">
-                <ReactTagInput
-                  tags={tags}
-                  placeholder="Tags"
-                  onChange={handleTags}
-                />
+                  <ReactTagInput
+                    tags={tags}
+                    placeholder="Tags"
+                    onChange={handleTags}
+                  />
               </div>
               <div className="col-12 py-3">
                 <p className="trending">Is it trending Opprotunity ?</p>
@@ -222,13 +231,10 @@ const AddEditBlog = ({ user, setActive }) => {
                 </select>
               </div>
               <div className="col-12 py-3">
-                <textarea
-                  className="form-control description-box"
-                  placeholder="Description"
-                  value={description}
-                  name="description"
-                  onChange={handleChange}
-                />
+                  <RichTextEditor
+                    value={description}
+                    onChange={(value) => { setForm({ ...form, description: value }) }}
+                  />
               </div>
               {/* <a href={description}></a> */}
               <div className="mb-3">
